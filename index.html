@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cursor demo</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <title>Type Tester</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div id="controls">
+        <label for="time-select">Test Duration:</label>
+        <select id="time-select">
+          <option value="10">10 seconds</option>
+          <option value="30">30 seconds</option>
+          <option value="60" selected>60 seconds</option>
+          <option value="600">10 minutes</option>
+        </select>
+      </div>
+      <div id="word-section"></div>
+      <input type="text" id="input-field" autocomplete="off" autofocus />
+      <div id="stats">
+        <span id="timer">60s</span>
+        <span id="wpm">0 WPM</span>
+      </div>
+      <div id="finish-page" style="display: none">
+        <h2>Test Complete!</h2>
+        <p id="final-wpm"></p>
+        <p id="final-accuracy"></p>
+        <button id="restart-btn">Restart</button>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
