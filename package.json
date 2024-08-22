@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "bun --watch server/main.ts"
   },
   "devDependencies": {
+    "@fal-ai/serverless-client": "^0.14.2",
+    "@types/express": "^4.17.21",
+    "express": "^4.19.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   },
